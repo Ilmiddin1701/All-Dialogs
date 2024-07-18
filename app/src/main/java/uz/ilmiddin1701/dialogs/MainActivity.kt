@@ -1,15 +1,10 @@
 package uz.ilmiddin1701.dialogs
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.snackbar.Snackbar
 import uz.ilmiddin1701.dialogs.databinding.ActivityMainBinding
 import uz.ilmiddin1701.dialogs.databinding.CustomDialogItemBinding
 
