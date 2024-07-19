@@ -276,7 +276,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/datepicker_dialog"
+                            android:text="@string/date_picker_dialog"
                             android:textColor="@color/white"
                             android:textSize="25sp"
                             android:textStyle="bold" />
@@ -481,7 +481,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/snackbar"
+                            android:text="@string/snack_bar"
                             android:textColor="@color/white"
                             android:textSize="25sp"
                             android:textStyle="bold" />

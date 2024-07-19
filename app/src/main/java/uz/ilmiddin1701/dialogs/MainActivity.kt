@@ -1,10 +1,12 @@
 package uz.ilmiddin1701.dialogs
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.material.snackbar.Snackbar
 import uz.ilmiddin1701.dialogs.databinding.ActivityMainBinding
 import uz.ilmiddin1701.dialogs.databinding.CustomDialogItemBinding
 
@@ -14,12 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
-//        val snackBar = Snackbar.make(it, "Salom snackbar", Snackbar.LENGTH_LONG)
-//        snackBar.setAction("Bekor qilish") {
-//            Toast.makeText(this@MainActivity, "Bekor qilindi", Toast.LENGTH_SHORT).show()
-//        }
-//        snackBar.show()
 
         binding.apply {
             alertDialog.setOnClickListener {
@@ -56,6 +52,19 @@ class MainActivity : AppCompatActivity() {
                 }
                 customDialog.setView(dialogView.root)
                 customDialog.show()
+            }
+
+            snackBar.setOnClickListener {
+                val snackBar = Snackbar.make(it, "Salom snackbar", Snackbar.LENGTH_LONG)
+                snackBar.setAction("Bekor qilish") {
+                    Toast.makeText(this@MainActivity, "Bekor qilindi", Toast.LENGTH_SHORT).show()
+                }
+                snackBar.setActionTextColor(Color.parseColor("#FECA2D"))
+                snackBar.setTextColor(getColor(R.color.white))
+                snackBar.setBackgroundTint(Color.parseColor("#119A4E"))
+                snackBar.anchorView = binding.snackBar
+                snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+                snackBar.show()
             }
         }
     }
